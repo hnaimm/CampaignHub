@@ -19,9 +19,7 @@ const Form = ({
   const formMethods = useForm({
     resolver: yupResolver(validationSchema),
   });
-  const { handleSubmit, watch } = formMethods;
-
-  console.log("watch!!!", watch());
+  const { handleSubmit } = formMethods;
 
   return (
     <FormProvider {...formMethods}>

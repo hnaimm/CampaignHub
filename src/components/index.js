@@ -12,3 +12,4 @@ export { default as Table } from "./table";
 export { default as Form } from "./form/Form";
 export { default as Button } from "./form/Button";
 export { default as TextInput } from "./form/TextInput";
+export { default as ErrorMessage } from "./form/ErrorMessage";
