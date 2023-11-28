@@ -10,10 +10,11 @@
 
   #modal-main {
     position: fixed;
-    background: white;
+    // background: white;
+    background: #f5f8ff;
     width: 50%;
     height: auto;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
@@ -21,13 +22,21 @@
     #close-button {
       width: 30px;
       height: 30px;
-      background-color: #ff00006e;
+      background-color: #ff00003b;
       border-radius: 50%;
       border: none;
       position: absolute;
       right: 10px;
       top: 10px;
       cursor: pointer;
+
+      box-shadow: 1px 1px 1px #8b8b8b7a;
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+      }
     }
 
     #modal-content {

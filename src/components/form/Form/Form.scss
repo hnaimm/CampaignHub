@@ -1,0 +1,9 @@
+form {
+  .form-action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 1rem;
+  }
+}

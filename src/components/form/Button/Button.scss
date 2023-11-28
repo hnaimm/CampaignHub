@@ -1,0 +1,23 @@
+.button {
+  padding: 0.75rem 1rem;
+  border-radius: 15px;
+  border: solid 1px;
+  border-color: #ffffff7a;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 1px #8b8b8b7a;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+  &.primary {
+    background-color: #ffae01;
+  }
+
+  &.seconday {
+    background-color: #e2e3ff;
+  }
+}

@@ -9,4 +9,6 @@ export { default as NavigationBar } from "./navigation/NavigationBar";
 export { default as Table } from "./table";
 
 // form
+export { default as Form } from "./form/Form";
 export { default as Button } from "./form/Button";
+export { default as TextInput } from "./form/TextInput";
