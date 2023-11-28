@@ -1,0 +1,61 @@
+#navigation-bar {
+  display: flex;
+  flex-direction: row;
+
+  box-shadow: 0px 3px 10px 0px rgb(184 184 184 / 40%);
+
+  // background-color: beige;
+  background-color: #ffffff80;
+
+  #company-section {
+    padding: 0.3rem 2rem;
+
+    #ch-logo {
+      width: 170px;
+    }
+  }
+
+  #tabs-section {
+    padding: 0.3rem 1rem;
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+
+    .tab {
+      padding: 0.3rem 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .tab-text {
+      }
+
+      .tab-active {
+      }
+    }
+  }
+
+  #user-section {
+    padding: 0.3rem 1rem;
+
+    display: flex;
+    flex-direction: row;
+
+    #user-info {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+
+      p {
+      }
+    }
+
+    #user-img {
+      #user-logo {
+        width: 50px;
+      }
+    }
+  }
+}

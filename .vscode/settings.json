@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "prettier.resolveGlobalModules": true,
+  "prettier.singleAttributePerLine": true,
+  "prettier.requireConfig": false,
+  "prettier.configPath": ".prettierrc.json",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

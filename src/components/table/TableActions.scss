@@ -1,0 +1,58 @@
+.row-actions-menu {
+  position: relative;
+
+  .toggle-button {
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #ffae01;
+
+    display: block;
+    margin: auto;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: col;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    height: 2.2rem;
+    padding: 0.8rem;
+
+    box-shadow: 1px 1px 1px grey;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+
+    svg {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+
+    .menu-list {
+      list-style: none;
+
+      .menu-item {
+        .menu-button {
+          width: 100%;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 0.5rem;
+
+          &:hover {
+            background-color: #dfdfdf;
+          }
+        }
+      }
+    }
+  }
+}
