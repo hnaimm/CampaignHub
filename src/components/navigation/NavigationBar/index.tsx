@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import "./NavigationBar.scss";
 
 const NavigationBar = ({
@@ -19,12 +19,16 @@ const NavigationBar = ({
 
       {/* tabs section and settings section*/}
       <section id="tabs-section">
-        <button className="tab">
-          <span className="tab-text">Campaigns</span>
-        </button>
-        <button className="tab">
-          <span className="tab-text">Insights</span>
-        </button>
+        <li className="tab">
+          <Link href={`/campaigns`} class-name="tab-text">
+            Campaigns
+          </Link>
+        </li>
+        <li className="tab">
+          <Link href={`/insights`} class-name="tab-text">
+            Insights
+          </Link>
+        </li>
       </section>
 
       {/* Logged in user section */}
