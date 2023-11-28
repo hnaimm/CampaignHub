@@ -32,11 +32,7 @@ const tableColumns = [
 const CampaignsTable = () => {
   const [tableData, setTableData] = useState(LIST_OF_CAMPAIGNS);
 
-  console.log("tableData", tableData);
-
   const onCampaignAdd = (newCampaign: Campaign) => {
-    console.log("CLONEE ", JSON.stringify(newCampaign));
-
     let newCampaignName = "";
 
     if (newCampaign.name.substring(0, 8) == "Copy of ") {

@@ -121,8 +121,6 @@ const Table = ({
   const [globalFilter, setGlobalFilter] = useState("");
   const [rowSelection, setRowSelection] = useState({});
 
-  console.log("rowSelection", rowSelection);
-
   const selectedRowsIndices = Object.keys(rowSelection);
 
   const emptyRowSelection = () => {
