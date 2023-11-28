@@ -12,11 +12,12 @@ const JoinSection = () => {
         title="JOIN"
         onClick={() => {
           showModal({
-            content: <SignInForm />,
+            content: (
+              <SignInForm modalMethods={{ modal, showModal, hideModal }} />
+            ),
           });
         }}
       />
-
       {modal}
     </>
   );

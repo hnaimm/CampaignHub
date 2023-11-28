@@ -1,33 +1,47 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import * as yup from "yup";
+import { Form, TextInput } from "@/components";
 
-const SignInForm = ({ onSubmit }: { onSubmit: SubmitHandler<any> }) => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
+  const { hideModal } = modalMethods;
 
-  console.log("watch!!!", watch());
+  const validationSchema = yup.object({
+    username: yup.string().required("This field is required"),
+    password: yup.string().required("This field is required"),
+  });
+
+  const onSubmit = (data: any) => {
+    hideModal();
+    alert(JSON.stringify(data));
+  };
+  const onCancel = () => {
+    hideModal();
+  };
 
   return (
     <div>
       <h1>Sign In to CampaignHub!</h1>
-      /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          placeholder="username"
-          {...register("username", { required: true })}
+
+      <Form
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+        onCancel={onCancel}
+      >
+        <TextInput
+          source="username"
+          label="Username"
+          placeholder="Enter username"
+          iconURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512' fill='%238180a6' %3E%3Cpath d='M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z' /%3E%3C/svg%3E"
+          required
         />
 
-        <input
-          placeholder="password"
-          {...register("exampleRequired", { required: true })}
+        <TextInput
+          source="password"
+          label="Password"
+          placeholder="••••••••••"
+          iconURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512' fill='%238180a6' %3E%3Cpath d='M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z' /%3E%3C/svg%3E"
+          required
         />
-        {errors.exampleRequired && <span>This field is required</span>}
-
-        <input type="submit" />
-      </form>
+      </Form>
     </div>
   );
 };
