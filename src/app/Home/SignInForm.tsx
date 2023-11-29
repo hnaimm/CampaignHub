@@ -2,13 +2,16 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import * as yup from "yup";
 import { ErrorMessage, Form, TextInput } from "@/components";
+import { useAuth } from "@/utils";
 import { ExistingAccounts } from "./ExistingAccounts.js";
 import bcryptjs from "bcryptjs";
 import { Account } from "@/types";
-import { nanoid } from "nanoid";
 
 const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
   const router = useRouter();
+
+  const props = useAuth();
+  const { login } = props;
 
   const { hideModal } = modalMethods;
 
@@ -32,13 +35,12 @@ const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
       if (passwordCorrect) {
         //sign in: generate token and save it to cookies
         setErrorMessage("");
-        hideModal();
+        // hideModal();//////////////////////////////////////////
 
-        const newToken = nanoid();
-        localStorage.setItem("access_token", newToken);
+        login({ username, password });
 
         //navigate to campaigns page
-        router.push("/campaigns");
+        // router.push("/campaigns");//////////////////////////////////////////
       } else {
         setErrorMessage("Incorrect username or password. Please try again.");
       }
