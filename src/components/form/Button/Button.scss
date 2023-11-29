@@ -14,10 +14,14 @@
   }
 
   &.primary {
-    background-color: #ffae01;
+    background-color: #f1b814;
+    color: white;
+    font-weight: bold;
   }
 
   &.seconday {
     background-color: #e2e3ff;
+    color: black;
+    font-weight: bold;
   }
 }

@@ -9,7 +9,7 @@ const JoinSection = () => {
   return (
     <>
       <Button
-        title="JOIN"
+        title="Join Now!"
         onClick={() => {
           showModal({
             content: (
