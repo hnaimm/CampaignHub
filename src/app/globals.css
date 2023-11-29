@@ -106,6 +106,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-family: "Lora", serif !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

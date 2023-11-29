@@ -1,10 +1,11 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import Cookies from "js-cookie";
 import jwt from "jsonwebtoken";
+import { Account } from "@/types";
 
 export const AuthContext = createContext<{
   isUserAuthenticated: boolean;
-  user: Object | null;
+  user: Account | null;
   login: Function;
   logout: Function;
 }>({
