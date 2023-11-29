@@ -62,12 +62,12 @@ const NavigationBar = ({
 
         {/* tabs section and settings section*/}
         <section id="tabs-section">
-          <li className={selectedTab ? "tab active" : "tab"}>
+          <li className={selectedTab == "campaigns" ? "tab tab-active" : "tab"}>
             <Link href={`/campaigns`} class-name="tab-text">
               Campaigns
             </Link>
           </li>
-          <li className={selectedTab ? "tab active" : "tab"}>
+          <li className={selectedTab == "insights" ? "tab tab-active" : "tab"}>
             <Link href={`/insights`} class-name="tab-text">
               Insights
             </Link>
