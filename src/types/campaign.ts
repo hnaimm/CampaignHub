@@ -5,7 +5,7 @@ interface Campaign {
   creation_date: Date;
   account_id: string;
   type: "Marketing" | "Educational" | "Governmental";
-  contacts: User[];
+  contacts: User[] | number[];
 }
 
 export default Campaign;
