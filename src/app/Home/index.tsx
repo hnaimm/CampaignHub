@@ -9,11 +9,7 @@ const Home = () => {
     <main id="landing-page">
       <nav>
         <Link id="logo-link" href={`/`} class-name="tab-text">
-          <img
-            id="ch-logo"
-            src="/CH_logo_navbar.PNG"
-            alt="Picture of the author"
-          />
+          <img id="ch-logo" src="/CH_logo_navbar.png" alt="Company Logo" />
         </Link>
 
         <div id="links">
@@ -52,8 +48,8 @@ const Home = () => {
           <div id="right">
             <img
               id="ch-screenshot"
-              src="/circle_design_2.PNG"
-              alt="Picture of the author"
+              src="/circle_design_2.png"
+              alt="CH screenshot"
             />
           </div>
         </section>

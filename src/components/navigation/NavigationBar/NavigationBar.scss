@@ -9,6 +9,9 @@
 
   #company-section {
     padding: 0.3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     #ch-logo {
       width: 170px;

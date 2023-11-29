@@ -10,7 +10,7 @@ const NavigationBar = ({
     <div id="navigation-bar">
       {/* company section */}
       <section id="company-section">
-        <img id="ch-logo" src="/CH_logo_navbar.PNG" alt="Company Logo" />
+        <img id="ch-logo" src="/CH_logo_navbar.png" alt="Company Logo" />
       </section>
 
       {/* tabs section and settings section*/}
