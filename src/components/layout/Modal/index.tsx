@@ -1,6 +1,6 @@
 "use client";
 import { ReactElement } from "react";
-import "./Modal.scss";
+import "./style.scss";
 
 const Modal = ({
   hideModal,

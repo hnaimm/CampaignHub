@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./table.scss";
+import "./style.scss";
 import { toast } from "react-toastify";
 
 import {

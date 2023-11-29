@@ -1,5 +1,5 @@
 import { MouseEventHandler } from "react";
-import "./Button.scss";
+import "./style.scss";
 
 const Button = ({
   title,

@@ -1,7 +1,7 @@
 import { useFormContext, Controller } from "react-hook-form";
 import Select, { components } from "react-select";
 import { ErrorMessage } from "@/components";
-import "./SelectInput.scss";
+import "./style.scss";
 
 const SelectInput = ({
   source,

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import SignUpButton from "./SignUpButton";
 import SignInButton from "./SignInButton";
-import "./Home.scss";
+import "./style.scss";
 
 const Home = () => {
   return (

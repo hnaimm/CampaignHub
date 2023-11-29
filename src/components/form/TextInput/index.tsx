@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { ErrorMessage } from "@/components";
-import "./TextInput.scss";
+import "./style.scss";
 
 const TextInput = ({
   source,

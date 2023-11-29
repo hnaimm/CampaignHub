@@ -1,5 +1,5 @@
 import { ReactElement, Children } from "react";
-import "./Card.scss";
+import "./style.scss";
 
 const Card = ({
   children,

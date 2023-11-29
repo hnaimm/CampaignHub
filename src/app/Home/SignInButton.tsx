@@ -2,7 +2,7 @@
 import { Button } from "@/components";
 import { useModal } from "@/utils";
 import SignInForm from "./SignInForm";
-import "./Home.scss";
+import "./style.scss";
 
 const SignUpButton = () => {
   const { modal, showModal, hideModal } = useModal();

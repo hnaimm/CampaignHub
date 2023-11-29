@@ -1,4 +1,4 @@
-import "./ErrorMessage.scss";
+import "./style.scss";
 
 const ErrorMessage = ({ message }: { message: string }) => {
   return (

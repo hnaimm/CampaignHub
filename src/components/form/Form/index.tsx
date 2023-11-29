@@ -3,7 +3,7 @@ import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ObjectSchema } from "yup";
 import Button from "../Button";
-import "./Form.scss";
+import "./style.scss";
 
 const Form = ({
   validationSchema,

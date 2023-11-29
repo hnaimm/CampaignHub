@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef, HTMLProps, ReactElement } from "react";
-import "./table.scss";
+import "./style.scss";
 import {
   flexRender,
   getCoreRowModel,

@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useModal } from "@/utils";
-import "./table.scss";
-// import "./TableActions.scss";
+import "./style.scss";
 import { toast } from "react-toastify";
 
 import {

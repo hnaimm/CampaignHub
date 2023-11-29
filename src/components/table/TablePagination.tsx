@@ -1,5 +1,5 @@
 import { Table } from "@tanstack/react-table";
-import "./table.scss";
+import "./style.scss";
 
 const TablePagination = ({ table }: { table: Table<any> }) => {
   return (
