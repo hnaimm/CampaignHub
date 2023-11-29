@@ -21,27 +21,21 @@ export default function useAuth() {
 
 export const AuthProvider = (props: { children: React.ReactNode }) => {
   const [user, setUser] = useState<Object | null>(null);
-  console.log("SETUSER ", user);
 
   useEffect(() => {
     let token = Cookies.get("access_token");
 
-    console.log("useEffect ", token);
-
     if (token) {
       try {
         let tokenDecoded = jwt.verify(token, "secret_key");
-        console.log("tokenDecoded", tokenDecoded);
 
         let userData = tokenDecoded.user;
 
-        console.log("userData", userData);
         if (userData) {
           setUser(userData);
         }
       } catch (err) {
         //token not verified -> signout
-        console.log("err", err);
         logout();
       }
     }

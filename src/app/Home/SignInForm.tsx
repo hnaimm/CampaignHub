@@ -6,6 +6,7 @@ import { useAuth } from "@/utils";
 import { ExistingAccounts } from "./ExistingAccounts.js";
 import bcryptjs from "bcryptjs";
 import { Account } from "@/types";
+import { toast } from "react-toastify";
 
 const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
   const router = useRouter();
@@ -34,13 +35,21 @@ const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
 
       if (passwordCorrect) {
         //sign in: generate token and save it to cookies
+
+        toast.success("Logged in successfully", {
+          position: "bottom-right",
+          theme: "dark",
+        });
+
         setErrorMessage("");
-        // hideModal();//////////////////////////////////////////
+        hideModal();
 
         login({ username, password });
 
-        //navigate to campaigns page
-        // router.push("/campaigns");//////////////////////////////////////////
+        setTimeout(() => {
+          //navigate to campaigns page
+          router.push("/campaigns");
+        }, 500);
       } else {
         setErrorMessage("Incorrect username or password. Please try again.");
       }
