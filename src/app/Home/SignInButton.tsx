@@ -19,7 +19,7 @@ const SignUpButton = () => {
           });
         }}
       >
-        Already have an account? Click to sign in.
+        Already have an account? Click to sign in
       </button>
 
       {modal}

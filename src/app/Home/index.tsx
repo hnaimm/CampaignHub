@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import SignUpButton from "./SignUpButton";
 import SignInButton from "./SignInButton";
 import "./Home.scss";
@@ -7,13 +8,13 @@ const Home = () => {
   return (
     <main id="landing-page">
       <nav>
-        <span id="logo">
+        <Link id="logo-link" href={`/`} class-name="tab-text">
           <img
             id="ch-logo"
-            src="/campaignHub logo.PNG"
+            src="/CH_logo_navbar.PNG"
             alt="Picture of the author"
           />
-        </span>
+        </Link>
 
         <div id="links">
           <a href="#home" className="link">
@@ -48,7 +49,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div id="right"></div>
+          <div id="right">
+            <img
+              id="ch-screenshot"
+              src="/circle_design_2.PNG"
+              alt="Picture of the author"
+            />
+          </div>
         </section>
         <section id="features">
           <h1 id="features-title">Our features</h1>
