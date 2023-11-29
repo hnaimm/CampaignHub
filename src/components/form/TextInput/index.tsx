@@ -36,6 +36,10 @@ const TextInput = ({
         placeholder={placeholder}
         type={type}
         style={{ backgroundImage: `url("${iconURL}")` }}
+        //To disable autocomplete:
+        onFocus={(event) => {
+          event.target.setAttribute("autocomplete", "off");
+        }}
       />
 
       {errors && errors[source]?.message && (
