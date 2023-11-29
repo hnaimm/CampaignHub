@@ -3,7 +3,7 @@ import { Button } from "@/components";
 import { useModal } from "@/utils";
 import SignInForm from "./SignInForm";
 
-const JoinSection = () => {
+const SignUpButton = () => {
   const { modal, showModal, hideModal } = useModal();
 
   return (
@@ -23,4 +23,4 @@ const JoinSection = () => {
   );
 };
 
-export default JoinSection;
+export default SignUpButton;

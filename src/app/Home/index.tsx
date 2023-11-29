@@ -1,5 +1,6 @@
 "use client";
-import JoinSection from "./JoinSection";
+import SignUpButton from "./SignUpButton";
+import SignInButton from "./SignInButton";
 import "./Home.scss";
 
 const Home = () => {
@@ -41,7 +42,10 @@ const Home = () => {
                 delivering on time and within budget.
               </p>
 
-              <JoinSection />
+              <div id="signin-buttons">
+                <SignUpButton />
+                <SignInButton />
+              </div>
             </div>
           </div>
           <div id="right"></div>

@@ -88,8 +88,14 @@
 
         #ch-description {
           max-width: 500px;
+          line-height: 1.5;
           margin: 2rem 0;
           font-size: 20px;
+        }
+
+        #signin-buttons {
+          display: flex;
+          flex-direction: row;
         }
       }
 
@@ -180,5 +186,20 @@
         }
       }
     }
+  }
+}
+
+#signin-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  color: grey;
+  margin-left: 1rem;
+  font-size: 16px;
+
+  &:focus,
+  &:active {
+    outline: none;
   }
 }
