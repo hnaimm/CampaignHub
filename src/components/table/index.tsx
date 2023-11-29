@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef, HTMLProps } from "react";
+import { useEffect, useState, useRef, HTMLProps, ReactElement } from "react";
 import "./table.scss";
 import {
   flexRender,
@@ -110,13 +110,17 @@ let selectColumn = columnHelper.accessor("select", {
 const Table = ({
   tableData,
   tableColumns,
-  onItemAdd,
+  onItemClone,
   onItemsDelete,
+  onItemAdd,
+  AddRowForm,
 }: {
   tableData: any[];
   tableColumns: any[];
-  onItemAdd: Function;
+  onItemClone: Function;
   onItemsDelete: Function;
+  onItemAdd: Function;
+  AddRowForm: (props: any) => JSX.Element;
 }) => {
   const [globalFilter, setGlobalFilter] = useState("");
   const [rowSelection, setRowSelection] = useState({});
@@ -134,7 +138,7 @@ const Table = ({
         rowItem={row.original}
         onClone={(props) => {
           emptyRowSelection();
-          onItemAdd(props);
+          onItemClone(props);
         }}
         onDelete={(props) => {
           emptyRowSelection();
@@ -178,12 +182,16 @@ const Table = ({
           )}
           onClone={(props) => {
             emptyRowSelection();
-            onItemAdd(props);
+            onItemClone(props);
           }}
           onDelete={(props) => {
             emptyRowSelection();
             onItemsDelete(props);
           }}
+          onAdd={(props) => {
+            onItemAdd(props);
+          }}
+          AddRowForm={AddRowForm}
         />
       </div>
 

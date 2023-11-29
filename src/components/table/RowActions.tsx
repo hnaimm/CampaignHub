@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./table.scss";
+import { toast } from "react-toastify";
 
 import {
   useFloating,
@@ -84,6 +85,10 @@ const RowActions = ({
                 <button
                   className="menu-button"
                   onClick={() => {
+                    toast.success("Row added successfully", {
+                      position: "bottom-right",
+                      theme: "dark",
+                    });
                     onClone(rowItem);
                     setIsOpen(false);
                   }}
@@ -95,6 +100,10 @@ const RowActions = ({
                 <button
                   className="menu-button"
                   onClick={() => {
+                    toast("Row added successfully", {
+                      position: "bottom-right",
+                      theme: "dark",
+                    });
                     onDelete([rowItem]);
                     setIsOpen(false);
                   }}

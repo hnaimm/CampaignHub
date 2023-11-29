@@ -1,11 +1,12 @@
 import { User } from "@/types";
 
 interface Campaign {
+  id: string;
   name: string;
-  creation_date: Date;
-  account_id: string;
   type: "Marketing" | "Educational" | "Governmental";
-  contacts: User[] | number[];
+  creation_date: Date;
+  contacts?: User[] | number[];
+  number_of_contacts?: number;
 }
 
 export default Campaign;

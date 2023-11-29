@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
-// import "./table.scss";
-import "./TableActions.scss";
+import { useModal } from "@/utils";
+import "./table.scss";
+// import "./TableActions.scss";
+import { toast } from "react-toastify";
 
 import {
   useFloating,
@@ -21,12 +23,18 @@ const RowActions = ({
   selectedRows,
   onClone,
   onDelete,
+  onAdd,
+  AddRowForm,
 }: {
   selectedRows: Object[];
   onClone: Function;
   onDelete: Function;
+  onAdd: Function;
+  AddRowForm: (props: any) => JSX.Element;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { modal, showModal, hideModal } = useModal();
 
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
@@ -52,7 +60,7 @@ const RowActions = ({
   const headingId = useId();
 
   return (
-    <div className="row-actions-menu">
+    <div className="table-actions-menu">
       <button
         ref={refs.setReference}
         {...getReferenceProps()}
@@ -83,6 +91,10 @@ const RowActions = ({
                   className="menu-button"
                   disabled={selectedRows?.length != 1 ? true : false}
                   onClick={() => {
+                    toast.success("Row cloned successfully", {
+                      position: "bottom-right",
+                      theme: "dark",
+                    });
                     onClone(selectedRows[0]);
                     setIsOpen(false);
                   }}
@@ -95,6 +107,15 @@ const RowActions = ({
                   className="menu-button"
                   disabled={selectedRows?.length < 1 ? true : false}
                   onClick={() => {
+                    toast(
+                      `${
+                        selectedRows?.length == 1 ? "Row" : "Rows"
+                      } added successfully`,
+                      {
+                        position: "bottom-right",
+                        theme: "dark",
+                      },
+                    );
                     onDelete(selectedRows);
                     setIsOpen(false);
                   }}
@@ -102,10 +123,36 @@ const RowActions = ({
                   Delete Row
                 </button>
               </li>
+              <li className="menu-item" key="delete">
+                <button
+                  className="menu-button"
+                  disabled={selectedRows?.length > 0}
+                  onClick={() => {
+                    showModal({
+                      content: (
+                        <AddRowForm
+                          modalMethods={{ modal, showModal, hideModal }}
+                          addRow={(row) => {
+                            toast.success("Row added successfully", {
+                              position: "bottom-right",
+                              theme: "dark",
+                            });
+                            onAdd(row);
+                          }}
+                        />
+                      ),
+                    });
+                  }}
+                >
+                  Add New
+                </button>
+              </li>
             </ul>
           </div>
         </FloatingFocusManager>
       )}
+
+      {modal}
     </div>
   );
 };
