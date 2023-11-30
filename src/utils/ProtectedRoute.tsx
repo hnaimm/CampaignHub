@@ -1,11 +1,13 @@
 "use client";
 import { useRouter, usePathname } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { LoadingScreen } from "@/components";
 import { useAuth } from "@/utils";
 
 const ProtectedRoute = (props) => {
   const { isUserAuthenticated } = useAuth();
+  let isUserAuthenticatedRef = useRef<boolean>();
+  isUserAuthenticatedRef.current = isUserAuthenticated;
 
   const router = useRouter();
   const pathname = usePathname();
@@ -40,18 +42,19 @@ const ProtectedRoute = (props) => {
   useEffect(() => {
     //if not authorized, navigate user to home page
     //if authorized, navigate user to campaigns page
-    if (
-      !isUserAuthenticated &&
-      (pathname == "/campaigns" || pathname == "/insights")
-    ) {
-      setTimeout(() => {
+
+    setTimeout(() => {
+      let isUserAuthenticated = isUserAuthenticatedRef.current;
+
+      if (
+        !isUserAuthenticated &&
+        (pathname == "/campaigns" || pathname == "/insights")
+      ) {
         router.push("/");
-      }, 500);
-    } else if (isUserAuthenticated && pathname == "/") {
-      setTimeout(() => {
+      } else if (isUserAuthenticated && pathname == "/") {
         router.push("/campaigns");
-      }, 500);
-    }
+      }
+    }, 500);
   }, [pathname]);
 
   return <ComponentToRender />;
