@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import * as yup from "yup";
 import { ErrorMessage, Form, TextInput } from "@/components";
 import { useAuth } from "@/utils";
-import { ExistingAccounts } from "./ExistingAccounts.js";
+import { LIST_OF_USER_ACCOUNTS } from "../../data/initialData.ts";
 import bcryptjs from "bcryptjs";
 import { Account } from "@/types";
 import { toast } from "react-toastify";
@@ -27,7 +27,7 @@ const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
     let { username, password } = data;
 
     // check if account exists:
-    let account = ExistingAccounts.find((acc) => acc.username == username);
+    let account = LIST_OF_USER_ACCOUNTS.find((acc) => acc.username == username);
     if (account) {
       //check if password correct:
 

@@ -3,7 +3,11 @@ import * as yup from "yup";
 import { ErrorMessage, Form, TextInput, SelectInput } from "@/components";
 import { Campaign } from "@/types";
 import { nanoid } from "nanoid";
-import { LIST_OF_CAMPAIGNS } from "./data.ts";
+import {
+  LIST_OF_CAMPAIGN_Types,
+  LIST_OF_CONTACTS,
+  LIST_OF_CAMPAIGNS,
+} from "../../data/initialData.ts";
 
 const CreateCampaignForm = ({
   modalMethods,
@@ -73,7 +77,7 @@ const CreateCampaignForm = ({
           source="type"
           label="Campaign type"
           placeholder="Select Type"
-          options={["Marketing", "Educational", "Governmental"].map((op) => ({
+          options={LIST_OF_CAMPAIGN_Types.map((op) => ({
             value: op,
             label: op,
           }))}
@@ -85,9 +89,9 @@ const CreateCampaignForm = ({
           source="contacts"
           label="Contacts"
           placeholder="Select 5 contacts"
-          options={["Marketing", "Educational", "Governmental"].map((op) => ({
-            value: op,
-            label: op,
+          options={LIST_OF_CONTACTS.map((op) => ({
+            value: op.id,
+            label: op.fullname,
           }))}
           isMulti
           iconURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='14' viewBox='0 0 448 512' fill='%238180a6' %3E%3Cpath d='M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z' /%3E%3C/svg%3E"
