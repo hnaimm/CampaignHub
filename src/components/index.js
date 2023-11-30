@@ -1,6 +1,7 @@
 // layout
 export { default as Card } from "./layout/Card";
 export { default as Modal } from "./layout/Modal";
+export { default as LoadingScreen } from "./layout/LoadingScreen";
 
 // navigation
 export { default as NavigationBar } from "./navigation/NavigationBar";

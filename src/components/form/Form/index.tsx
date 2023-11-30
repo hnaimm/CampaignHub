@@ -20,7 +20,6 @@ const Form = ({
     resolver: yupResolver(validationSchema),
   });
   const { handleSubmit, watch } = formMethods;
-  console.log("watch", watch());
 
   return (
     <FormProvider {...formMethods}>
