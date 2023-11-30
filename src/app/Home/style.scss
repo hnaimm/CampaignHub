@@ -18,6 +18,10 @@
       #ch-logo {
         width: 160px;
       }
+
+      @media only screen and (max-width: 500px) {
+        display: none;
+      }
     }
 
     #links {
@@ -60,8 +64,14 @@
       display: flex;
       flex-direction: row;
 
+      @media only screen and (max-width: 1000px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+
       #left {
-        width: 60%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -76,16 +86,31 @@
 
           &:nth-child(1) {
             color: #490b3d;
+            font-size: 2vw;
             line-height: 1;
           }
           &:nth-child(2) {
             color: #bd1e51;
-            font-size: 75px;
+            font-size: 4vw;
             line-height: 1;
           }
           &:nth-child(3) {
             color: #f1b814;
+            font-size: 2vw;
             line-height: 1.6;
+          }
+
+          @media only screen and (max-width: 1000px) {
+            &:nth-child(1) {
+              margin-top: 2rem;
+              font-size: 7vw;
+            }
+            &:nth-child(2) {
+              font-size: 10vw;
+            }
+            &:nth-child(3) {
+              font-size: 7vw;
+            }
           }
         }
 
@@ -113,6 +138,21 @@
           width: 95%;
         }
       }
+
+      @media only screen and (max-width: 1000px) {
+        #left {
+          width: 70%;
+        }
+
+        #right {
+          width: 90%;
+
+          #ch-screenshot {
+            width: 65%;
+            margin: auto;
+          }
+        }
+      }
     }
 
     #features {
@@ -128,16 +168,19 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
 
         .feature {
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin-bottom: 2rem;
 
           .feature-icon {
             margin-bottom: 2rem;
           }
           .feature-description {
+            text-align: center;
             font-size: 25px;
             font-weight: 600;
           }
@@ -169,7 +212,8 @@
 
       #email-section {
         #email-input {
-          width: 400px;
+          width: 80vw;
+          max-width: 400px;
           padding: 1rem 1.25rem;
           border-radius: 30px;
           margin: auto;
