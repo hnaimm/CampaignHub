@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import * as yup from "yup";
 import { ErrorMessage, Form, TextInput } from "@/components";
 import { useAuth } from "@/utils";
-import { LIST_OF_USER_ACCOUNTS } from "../../data/initialData.ts";
+import { LIST_OF_USER_ACCOUNTS } from "../../data/allData.ts";
 import bcryptjs from "bcryptjs";
 import { Account } from "@/types";
 import { toast } from "react-toastify";

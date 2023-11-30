@@ -7,7 +7,7 @@ import {
   LIST_OF_CAMPAIGN_Types,
   LIST_OF_CONTACTS,
   LIST_OF_CAMPAIGNS,
-} from "../../data/initialData.ts";
+} from "../../data/allData.ts";
 
 const CreateCampaignForm = ({
   modalMethods,

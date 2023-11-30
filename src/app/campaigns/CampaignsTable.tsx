@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Campaign } from "@/types";
-import { LIST_OF_CAMPAIGNS } from "../../data/initialData.ts";
+import { LIST_OF_CAMPAIGNS } from "../../data/allData.ts";
 import CreateCampaignForm from "./CreateCampaignForm.tsx";
 import { Card, Table } from "@/components";
 

@@ -1,4 +1,4 @@
-import { Campaign, User } from "@/types";
+import { Campaign } from "@/types";
 
 export const LIST_OF_CAMPAIGN_Types: string[] = [
   "Marketing",
@@ -122,6 +122,12 @@ export const LIST_OF_CAMPAIGNS: Campaign[] = [
 ];
 
 export const LIST_OF_USER_ACCOUNTS = [
+  {
+    username: "blue",
+    full_name: "Haifa Naim",
+    company_name: "BlueAI",
+    hash: "$2a$08$UKBKmpN.1DWjKvYqt3DoFOstoObOwyg.iNnDSb1nX60T4EIIpWFzG",
+  },
   {
     username: "emilyr",
     full_name: "Emily Rodriguez",
