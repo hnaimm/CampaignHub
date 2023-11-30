@@ -13,6 +13,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+
     #ch-logo {
       width: 170px;
     }
