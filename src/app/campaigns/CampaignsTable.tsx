@@ -61,11 +61,7 @@ const CampaignsTable = () => {
 
     deletedCampaigns.forEach((deletedCampaign) => {
       updateTableData = updateTableData.filter(
-        (campaign) =>
-          !(
-            campaign.name == deletedCampaign.name &&
-            campaign.account_id == deletedCampaign.account_id
-          ),
+        (campaign) => !(campaign.id == deletedCampaign.id),
       );
     });
 

@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "CampaignHub",
-  description: "Streamlining Your Message Mastery",
+  description: "All your campaigns in one place",
 };
 
 export default function RootLayout({

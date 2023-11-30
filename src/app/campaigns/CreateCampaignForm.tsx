@@ -39,6 +39,7 @@ const CreateCampaignForm = ({
       addRow({
         id: nanoid(),
         name: data.name,
+        // @ts-ignore
         type: data.type.value,
         creation_date: new Date(),
         number_of_contacts: data.contacts?.length,

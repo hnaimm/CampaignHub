@@ -21,7 +21,7 @@ export default function useAuth() {
 }
 
 export const AuthProvider = (props: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<Object | null>(null);
+  const [user, setUser] = useState<Account | null>(null);
 
   useEffect(() => {
     let token = Cookies.get("access_token");
