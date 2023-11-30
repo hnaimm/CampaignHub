@@ -48,7 +48,7 @@ const Home = () => {
           <div id="right">
             <img
               id="ch-screenshot"
-              src="/circle_design_2.png"
+              src="/CH_circle_design.png"
               alt="CH screenshot"
             />
           </div>
