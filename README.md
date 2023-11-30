@@ -4,7 +4,7 @@
 
 CampaignHub is a campaigns management system that helps your business plan, execute and manage marketing campaigns, ensuring delivering on time and within budget.
 
-![CampaignHub Logo](public/CH_logo_full.png.png)
+![CampaignHub Logo](./public/CH_logo_full.png)
 
 ## About this project
 
