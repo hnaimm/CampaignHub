@@ -44,7 +44,11 @@ const SignInForm = ({ modalMethods }: { modalMethods: any }) => {
         setErrorMessage("");
         hideModal();
 
-        login({ username, password });
+        login({
+          username: account.username,
+          full_name: account.full_name,
+          company_name: account.company_name,
+        });
 
         setTimeout(() => {
           //navigate to campaigns page

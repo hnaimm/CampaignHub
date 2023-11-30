@@ -81,10 +81,8 @@ const NavigationBar = ({
           {...getReferenceProps()}
         >
           <div id="user-info">
-            <p id="user-name">{user?.username}</p>
-            <p id="user-company">
-              {user?.username} {user?.username}
-            </p>
+            <p id="user-name">{user?.full_name}</p>
+            <p id="user-company">{user?.company_name}</p>
           </div>
           <div id="user-avatar">
             {user?.username?.substring(0, 1).toUpperCase()}
