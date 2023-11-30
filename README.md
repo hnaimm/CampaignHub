@@ -9,6 +9,7 @@ CampaignHub is a campaigns management system that helps your business plan, exec
 ## About this project
 
 This project is published on **Vercel**: [`https://campaignhub.vercel.app/`](https://campaignhub.vercel.app/).
+
 And the code is hosted on **Github**: [`https://github.com/hnaimm/CampaignHub`](https://github.com/hnaimm/CampaignHub).
 
 ## _Important: Login Information_
