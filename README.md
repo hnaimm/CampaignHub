@@ -56,7 +56,8 @@ Project consists of 3 pages:
 - **React & NextJs**
 - **Typescript**
 - **SASS** for styling
-- **react-hook-form** for form building & **yup** for validation
+- **react-hook-form** for form building & **yup** for form validation
+- **zustand** for global state management
 - **react-table** from table building
 - **react-select** for drop-down input fields
 - **nivo** for insights charts
@@ -77,6 +78,18 @@ Project consists of 3 pages:
 
 - **useModal**: a hook that helps open and manage the popup modals.
 - **useAuth**: a hook that implements the login/logout functionalities and store user info in context, to be used in project.
+
+### Data
+
+- Mock data used in this project are all located in folder [`/src/data`](), including:
+  1- List of campaign type options (LIST_OF_CAMPAIGN_TYPES)
+  2- List of campaigns (LIST_OF_CAMPAIGNS)
+  3- List of system users that are allowed to login (LIST_OF_USER_ACCOUNTS)
+  4- List of contacts to be used when creating a new campaign (LIST_OF_CONTACTS)
+  5- Mock data for insights page
+
+- **Global state management (Zustand)**: zustand was used to manage the campaigns list.
+  'LIST_OF_CAMPAIGNS' was used as the initial campaigns list, and stored in a zustand store, then all actions (clone, delete, add) done to campaigns table where reflected on the zustand store.
 
 ### What is missing in the project
 

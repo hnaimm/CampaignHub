@@ -4,7 +4,7 @@ import { ErrorMessage, Form, TextInput, SelectInput } from "@/components";
 import { Campaign } from "@/types";
 import { nanoid } from "nanoid";
 import {
-  LIST_OF_CAMPAIGN_Types,
+  LIST_OF_CAMPAIGN_TYPES,
   LIST_OF_CONTACTS,
   LIST_OF_CAMPAIGNS,
 } from "../../data/allData.ts";
@@ -75,7 +75,7 @@ const CreateCampaignForm = ({
           source="type"
           label="Campaign type"
           placeholder="Select Type"
-          options={LIST_OF_CAMPAIGN_Types.map((op) => ({
+          options={LIST_OF_CAMPAIGN_TYPES.map((op) => ({
             value: op,
             label: op,
           }))}

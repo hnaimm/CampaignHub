@@ -85,7 +85,7 @@ const RowActions = ({
                 <button
                   className="menu-button"
                   onClick={() => {
-                    toast.success("Row added successfully", {
+                    toast.success("Row cloned successfully", {
                       position: "bottom-right",
                       theme: "dark",
                     });
@@ -100,7 +100,7 @@ const RowActions = ({
                 <button
                   className="menu-button"
                   onClick={() => {
-                    toast("Row added successfully", {
+                    toast("Row deleted successfully", {
                       position: "bottom-right",
                       theme: "dark",
                     });

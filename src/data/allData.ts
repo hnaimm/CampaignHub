@@ -1,6 +1,6 @@
 import { Campaign } from "@/types";
 
-export const LIST_OF_CAMPAIGN_Types: string[] = [
+export const LIST_OF_CAMPAIGN_TYPES: string[] = [
   "Marketing",
   "Educational",
   "Governmental",

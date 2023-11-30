@@ -109,7 +109,7 @@ const RowActions = ({
                     toast(
                       `${
                         selectedRows?.length == 1 ? "Row" : "Rows"
-                      } added successfully`,
+                      } deleted successfully`,
                       {
                         position: "bottom-right",
                         theme: "dark",

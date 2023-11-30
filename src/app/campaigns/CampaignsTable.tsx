@@ -1,10 +1,8 @@
 "use client";
-import { useState } from "react";
 import { Campaign } from "@/types";
-import { LIST_OF_CAMPAIGNS } from "../../data/allData.ts";
+import { useCampaignsStore } from "@/utils";
 import CreateCampaignForm from "./CreateCampaignForm.tsx";
 import { Card, Table } from "@/components";
-
 import { createColumnHelper } from "@tanstack/react-table";
 
 const columnHelper = createColumnHelper<Campaign>();
@@ -29,7 +27,11 @@ const tableColumns = [
 ];
 
 const CampaignsTable = () => {
-  const [tableData, setTableData] = useState(LIST_OF_CAMPAIGNS);
+  const {
+    campaigns: campaignsListInStore,
+    addCampaignToStore,
+    deleteCampaignFromStore,
+  } = useCampaignsStore();
 
   const onCampaignClone = (newCampaign: Campaign) => {
     let newCampaignName = "";
@@ -51,33 +53,24 @@ const CampaignsTable = () => {
     }
 
     newCampaign = { ...newCampaign, name: newCampaignName };
-    let updateTableData = [newCampaign, ...tableData];
 
-    setTableData(updateTableData);
+    addCampaignToStore(newCampaign);
   };
 
   const onCampaignsDelete = (deletedCampaigns: Campaign[]) => {
-    let updateTableData = tableData;
-
     deletedCampaigns.forEach((deletedCampaign) => {
-      updateTableData = updateTableData.filter(
-        (campaign) => !(campaign.id == deletedCampaign.id),
-      );
+      deleteCampaignFromStore(deletedCampaign);
     });
-
-    setTableData(updateTableData);
   };
 
   const onCampaignAdd = (newCampaign: Campaign) => {
-    let updateTableData = [newCampaign, ...tableData];
-
-    setTableData(updateTableData);
+    addCampaignToStore(newCampaign);
   };
 
   return (
     <Card fullHeight>
       <Table
-        tableData={tableData}
+        tableData={campaignsListInStore}
         tableColumns={tableColumns}
         onItemClone={onCampaignClone}
         onItemsDelete={onCampaignsDelete}
