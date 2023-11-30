@@ -11,6 +11,9 @@
   "dependencies": {
     "@floating-ui/react": "^0.26.3",
     "@hookform/resolvers": "^3.3.2",
+    "@nivo/bar": "^0.84.0",
+    "@nivo/line": "^0.84.0",
+    "@nivo/radar": "^0.84.0",
     "@tanstack/match-sorter-utils": "^8.8.4",
     "@tanstack/react-table": "^8.10.7",
     "bcryptjs": "^2.4.3",

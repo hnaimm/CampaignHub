@@ -1,0 +1,23 @@
+main {
+  #insights-wrapper {
+    height: 92vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    #charts-row-1 {
+    }
+
+    #charts-row-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .chart-left,
+      .chart-right {
+        width: 50%;
+      }
+    }
+  }
+}
