@@ -97,3 +97,7 @@ Due to limitation of time, a few requested features where not implemented, and t
 
 - User signup functionality
 - Filter by type selection in campaigns table
+
+### Console Errors
+
+Some errors are appearing in the console ("Support for defaultProps will be removed from..."). These errors are due to issues in "nivo" library and not related to my code.

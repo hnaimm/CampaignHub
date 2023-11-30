@@ -15,7 +15,7 @@ const PerformanceChart = () => {
         <div style={{ height: "23vh" }}>
           <ResponsiveBar
             data={PerformanceChartData}
-            keys={["week 1", "week 2", "week 3", "week 4", "week 4", "week 6"]}
+            keys={["week 1", "week 2", "week 3", "week 4", "week 5", "week 6"]}
             indexBy="Campaign Type"
             margin={{ top: 30, right: 50, bottom: 50, left: 50 }}
             padding={0.3}
