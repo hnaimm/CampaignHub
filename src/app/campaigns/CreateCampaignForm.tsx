@@ -30,8 +30,6 @@ const CreateCampaignForm = ({
   });
 
   const onSubmit = (data: Campaign) => {
-    alert(JSON.stringify(data));
-
     if (LIST_OF_CAMPAIGNS.find((camp) => camp.name == data.name)) {
       //Can't add campaign, name already exists
       setErrorMessage(
