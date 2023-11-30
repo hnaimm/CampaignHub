@@ -122,7 +122,7 @@ const RowActions = ({
                   Delete Row
                 </button>
               </li>
-              <li className="menu-item" key="delete">
+              <li className="menu-item" key="add">
                 <button
                   className="menu-button"
                   disabled={selectedRows?.length > 0}
