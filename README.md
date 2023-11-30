@@ -4,14 +4,14 @@
 
 CampaignHub is a campaigns management system that helps your business plan, execute and manage marketing campaigns, ensuring delivering on time and within budget.
 
----
+![CampaignHub Logo](./public/CH_logo_full.png.png)
 
-### About this project
+## About this project
 
 This project is published on **Vercel**: [`https://campaignhub.vercel.app/`](https://campaignhub.vercel.app/).
 And the code is hosted on **Github**: [`https://github.com/hnaimm/CampaignHub`](https://github.com/hnaimm/CampaignHub).
 
-### _Important: Login Information_
+## _Important: Login Information_
 
 To login please use the following credentials:
 
@@ -22,7 +22,7 @@ password: "P@ssw0rd"
 
 or any of the credentials listed in **LIST_OF_USER_ACCOUNTS** in file [`/src/data/allData.ts`]().
 
-### To run this project locally
+## To run this project locally
 
 - Run in dev mode:
 
@@ -39,13 +39,11 @@ npm run start
 
 Then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
-
 # About the code
 
 These are the main points reagrding what was covered in the project
 
-#### Project pages
+### Project pages
 
 Project consists of 3 pages:
 
@@ -53,7 +51,7 @@ Project consists of 3 pages:
 - **Cmpaigns Page (/campaigns)**: Page listing all campaigns for a business.
 - **Insights Page (/insights)**: Dashboard showing important data summarized in charts.
 
-#### Third Party Libraries used
+### Third Party Libraries used
 
 - **React & NextJs**
 - **Typescript**
@@ -68,19 +66,19 @@ Project consists of 3 pages:
 - **bcryptjs** to hash passwords on login
 - For user authentication: **jsonwebtoken** to generate and verify tokens & **js-cookie** to store token in browser cookies
 
-#### User Authentication
+### User Authentication
 
 - **User login**: on user login, password is encrypted using bcrypt and verified by comparing them to the stores passwords that are already hashed, then after successfully logging in, user in automatically navigated to the /campaigns page
 - **Protected Route**: pages are wrapped in a ProtectedRoute. This component reads the loggin user info from useAuth hook and checks if user is authorized to visits page and redirects users accordingly.
   Users that are not logged in are not allowed to visit /campaigns and /insights page, so they are redirected to home page (/).
   Users that are logged in are automatically redirected to /campaigns page
 
-#### Custom Hooks
+### Custom Hooks
 
 - **useModal**: a hook that helps open and manage the popup modals.
 - **useAuth**: a hook that implements the login/logout functionalities and store user info in context, to be used in project.
 
-#### What is missing in the project
+### What is missing in the project
 
 Due to limitation of time, a few requested features where not implemented, and they are:
 
