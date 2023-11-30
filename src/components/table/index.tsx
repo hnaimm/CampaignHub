@@ -62,7 +62,7 @@ const fuzzyFilter = (row, columnId, value, addMeta) => {
   return itemRank.passed;
 };
 
-function IndeterminateCheckbox({
+function SelectionCheckbox({
   indeterminate,
   className = "",
   ...rest
@@ -87,7 +87,7 @@ function IndeterminateCheckbox({
 
 let selectColumn = columnHelper.accessor("select", {
   header: ({ table }: any) => (
-    <IndeterminateCheckbox
+    <SelectionCheckbox
       {...{
         checked: table.getIsAllRowsSelected(),
         indeterminate: table.getIsSomeRowsSelected(),
@@ -96,7 +96,7 @@ let selectColumn = columnHelper.accessor("select", {
     />
   ),
   cell: ({ row }: any) => (
-    <IndeterminateCheckbox
+    <SelectionCheckbox
       {...{
         checked: row.getIsSelected(),
         disabled: !row.getCanSelect(),
@@ -106,6 +106,7 @@ let selectColumn = columnHelper.accessor("select", {
       }}
     />
   ),
+  enableSorting: false,
 });
 
 const Table = ({
@@ -207,7 +208,7 @@ const Table = ({
                       <div
                         {...{
                           className: header.column.getCanSort()
-                            ? "cursor-pointer select-none"
+                            ? "sortable"
                             : "",
                           onClick: header.column.getToggleSortingHandler(),
                         }}
